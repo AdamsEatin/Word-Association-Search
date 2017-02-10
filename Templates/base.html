@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='main_page.css') }}" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>Web & Cloud Development #3</h1>
+      </div>
+      <hr/>
+      <div>
+      <form  method="POST" action = "/uploader" enctype="multipart/form-data">
+        <input type="file" name="file"><br /><br />
+        <input type="submit" value="Upload">
+      </form><br>
+	  	<a href = "/previous">
+		<input type="Submit" value="Previous Results">
+		</a>
+	  
+      </div>
+    </div>
+  </body>
+</html>

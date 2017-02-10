@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='main_page.css') }}" />
+  </head>
+  <body>
+	<div class="header">
+		<h1>Previous Files</h1>
+    </div>
+	<hr/>
+	{% for name in names %}
+	<form action = "/previousResult", method = "POST">
+		<input type = "Submit" , name = "button" value = {{ name }}>
+	</form>
+	<br>
+	{% endfor %}		
+    </div>
+	<br>
+	<a href = "/base">
+		<input type="Submit" value="Main Menu">
+	</a>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='main_page.css') }}" />
+  </head>
+  <body>
+	<div class="header">
+		<h1>Results</h1>
+    </div>
+	<hr/>
+	<table>
+	{% for item in results %}
+    <tr>
+      <td>{{ item['word'] }} ({{item['value']}}) -> {{item['matches']}}</td>
+    </tr>
+	{% endfor %}
+	
+	</table>
+		
+    </div>
+	<a href = "/base">
+		<input type="Submit" value="Back">
+	</a>
+	<a href = "/previous">
+		<input type="Submit" value="Previous Results">
+	</a>
+	
+  </body>
+</html>
